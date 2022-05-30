@@ -1,0 +1,181 @@
+
+body {
+	height: 100%;
+	padding: 20px 0;
+	background: white;
+	background: #48C3CB;
+  background-repeat: no-repeat;
+	position: relative;
+	color: white;
+
+	* {
+		font-family: 'Lato', sans-serif;
+	}
+}
+
+$font-size-base: 16px;
+
+.payment-cards li {
+	font-size: $font-size-base; 
+	display: inline-block;
+	margin-right: .25em;
+	background-size: 23.077em;
+	background-repeat: no-repeat;
+	width: 4.165em;
+	height: 2.74em;
+  transition: background .1s ease-out;
+	zoom: 1;
+
+	&:last-child {
+		margin-left: 0;
+	}
+
+.card-details {
+  width: 100%;
+  height: 100%;
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1px;
+    border: 1px solid rgba(221, 221, 221, 0.5);
+    font-weight: 500;
+    text-transform: uppercase;
+    &.inline {
+      margin-right: 1px;
+    }
+    &::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder, &:placeholder-shown {
+      color: #C5DFFF;
+    }
+  }
+}
+
+.card-types {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.card_type {
+	opacity: 0.5;
+	vertical-align: top;
+	background-color: #fff;
+	text-align: center;
+	color: #666;
+	transition: all 0.2s;
+	display: inline-block;
+	font-size: 35px;
+	margin: 0 5px;
+	transition: all 0.2s;
+	&.active {
+		transform: scale(1.3);
+		opacity: 1;
+	}
+}
+
+.card-confirm {
+  position: relative;
+  width: 100%;
+  height: 10%;
+}
+
+.button-confirm {
+	padding: 10px 0;
+  width: 100%;
+	outline: none !important;
+	background: #e86b1a;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: none;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	color: white;
+}
+.title {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.label {
+	font-size: 16px;
+}
+
+p {
+	font-size: 14px;
+}
+
+.line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.loading, 
+.success {
+	display: none;
+	text-align: center;
+}
+
+@keyframes loadingH {
+    0% {width: 15px;}
+    50% {width: 35px; padding: 4px;}
+    100% {width: 15px;}
+}
+
+.load-8 .line {animation: loadingH 1.5s cubic-bezier(.17,.37,.43,.67) infinite;}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10px auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}

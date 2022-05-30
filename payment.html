@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payment </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.processed.css" />
+</head>
+<body>
+<div class="page-container">
+<div class="container">
+<div class="row">
+<div class="col text-center">
+    	<h1 class="title">mypayment</h1>
+		<br/>
+</div>
+</div>
+<div class="row">
+<div class="col">
+		<div class="card-checkout" id="card-checkout">
+		<div class="card-types">
+		</div>
+<div class="card-options">
+<form class="card-details" id="card-form">
+	<div class="form-group">
+	<label for="cc-number">Card Number</label>
+<input id="cc-number" name="cc-number" class="cc-number" placeholder="XXXX XXXX XXXX XXXX" data-numeric required>
+		</div>
+								
+			<div class="form-group">
+			<label for="cc-expiry">Expiry</label>
+            <div class="row">
+			<div class="col-4">
+	        <input class="cc-expiry inline" placeholder="MM/YY" required>
+			</div>
+			<div class="col-4">
+		    <input class="cc-cvc" placeholder="CVC" data-numeric required>
+			</div>
+	        </div>
+	 	    </div>
+	        </form>
+			</div>
+<div class="card-confirm">
+    <button id="submit-button" class="button-confirm">
+	<i class="fa fa-lock"></i> Submit
+	</button>
+	</div>
+</div>
+	<div id="loading" class="loading hidden">
+	<div class="load-8">
+    <div class="line"></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+  
+	<script src="payment.js"></script>
+</body>
+</html>
